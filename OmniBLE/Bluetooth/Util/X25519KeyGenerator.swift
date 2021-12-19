@@ -9,8 +9,9 @@ import Foundation
 
 struct X25519KeyGenerator {
     func generatePrivateKey() -> Data {
-        let key = Curve25519.KeyAgreement.PrivateKey()
-        return key.rawRepresentation
+//        let key = Curve25519.KeyAgreement.PrivateKey()
+//        return key.rawRepresentation
+        return Data(hex: "27ec94b71a201c5e92698d668806ae5ba00594c307cf5566e60c1fc53a6f6bb6")
     }
     func publicFromPrivate(_ privateKey: Data) throws -> Data{
         let key = try Curve25519.KeyAgreement.PrivateKey(rawRepresentation: privateKey)
